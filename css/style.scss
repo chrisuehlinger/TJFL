@@ -1,9 +1,55 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .fade-in {
-    transition: all 750ms ease;
     opacity: 0;
     
     .present & {
+        -webkit-animation: fade-in 750ms ease;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes roll-easy {
+    0% {
+        opacity: 0;
+    }
+    50% {
         opacity: 1;
+        transform: none;
+        color: #fff;
+    }
+    100% {
+        color: transparent;
+        transform: translate3d( 0px, 0px, -30px ) rotateX( -90deg );
+    }
+}
+
+@keyframes roll-hard {
+    0% {
+        opacity: 0;
+    }
+    
+    20% {
+        opacity: 1;
+        color: #fff;
+        transform: none;
+    }
+    
+    40%, 80% {
+        color: transparent;
+        transform: translate3d( 0px, 0px, -30px ) rotateX( -90deg );
+    }
+    
+    100% {
+        color: transparent;
+        transform: translate3d( 0px, 60px, -30px ) rotateX( -90deg );
     }
 }
 
@@ -21,7 +67,6 @@
         position: relative;
         padding: 0 2px;
 
-        transition: all 400ms ease;
         transform-origin: 50% 100%;
         transform-style: preserve-3d;
         
@@ -35,9 +80,9 @@
             right: 0;
             text-align: center;
             padding: 0 2px;
+            overflow: visible;
 
-            color: #fff;
-            background: hsl(206, 80%, 30%);
+            color: #fff !important;
 
             transform-origin: 50% 100%;
             transform: translate3d( 0px, -105%, 0px ) rotateX( 90deg );
@@ -48,15 +93,45 @@
 
             display: block;
             padding: 0 2px;
-            height: 1px;
+            margin-top: -36px;
             overflow: hidden;
             color: transparent;
         }
     }
     
-    .present & span {
-        background: #111;
-
-        transform: translate3d( 0px, 0px, -30px ) rotateX( -90deg );
+    
+    
+    &.correct span:before {
+        color: green !important;
+    }
+    
+    &.incorrect span:before {
+        color: red !important;
+    }
+    
+    &.easy {
+        .present & span {
+            -webkit-animation: roll-easy 1s ease;
+            -webkit-animation-fill-mode: both;
+        }
+    }
+    
+    &.hard {
+        
+        span:before {
+            transform: translate3d(0px, -105%, -60px) rotateX( 90deg );
+        }
+        
+        span:after {
+            transform: translate3d(0px, -105%, -30px) rotateX( 90deg );
+            background-image:url(../img/default.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .present & span {
+            -webkit-animation: roll-hard 2.5s ease;
+            -webkit-animation-fill-mode: both;
+        }
     }
 }

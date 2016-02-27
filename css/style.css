@@ -1,13 +1,84 @@
-/* line 1, /Users/Chris/Development/TJFL/css/style.scss */
-.fade-in {
-  -webkit-transition: all 750ms ease;
-          transition: all 750ms ease;
-  opacity: 0; }
-  /* line 5, /Users/Chris/Development/TJFL/css/style.scss */
-  .present .fade-in {
-    opacity: 1; }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /* line 10, /Users/Chris/Development/TJFL/css/style.scss */
+.fade-in {
+  opacity: 0; }
+  /* line 13, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .fade-in {
+    -webkit-animation: fade-in 750ms ease;
+    -webkit-animation-fill-mode: both; }
+
+@-webkit-keyframes roll-easy {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    color: #fff; }
+  100% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); } }
+
+@keyframes roll-easy {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    color: #fff; }
+  100% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); } }
+
+@-webkit-keyframes roll-hard {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1;
+    color: #fff;
+    -webkit-transform: none;
+            transform: none; }
+  40%, 80% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); }
+  100% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 60px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 60px, -30px) rotateX(-90deg); } }
+
+@keyframes roll-hard {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1;
+    color: #fff;
+    -webkit-transform: none;
+            transform: none; }
+  40%, 80% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); }
+  100% {
+    color: transparent;
+    -webkit-transform: translate3d(0px, 60px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 60px, -30px) rotateX(-90deg); } }
+
+/* line 56, /Users/Chris/Development/TJFL/css/style.scss */
 .roll-translate {
   display: inline-block;
   overflow: hidden;
@@ -16,18 +87,16 @@
           perspective: 500px;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%; }
-  /* line 19, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 65, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate span {
     display: block;
     position: relative;
     padding: 0 2px;
-    -webkit-transition: all 400ms ease;
-            transition: all 400ms ease;
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d; }
-    /* line 28, /Users/Chris/Development/TJFL/css/style.scss */
+    /* line 73, /Users/Chris/Development/TJFL/css/style.scss */
     .roll-translate span:before {
       content: attr(data-translation);
       display: block;
@@ -37,22 +106,42 @@
       right: 0;
       text-align: center;
       padding: 0 2px;
-      color: #fff;
-      background: #0f558a;
+      overflow: visible;
+      color: #fff !important;
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-transform: translate3d(0px, -105%, 0px) rotateX(90deg);
               transform: translate3d(0px, -105%, 0px) rotateX(90deg); }
-    /* line 46, /Users/Chris/Development/TJFL/css/style.scss */
+    /* line 91, /Users/Chris/Development/TJFL/css/style.scss */
     .roll-translate span:after {
       content: attr(data-translation);
       display: block;
       padding: 0 2px;
-      height: 1px;
+      margin-top: -36px;
       overflow: hidden;
       color: transparent; }
-  /* line 57, /Users/Chris/Development/TJFL/css/style.scss */
-  .present .roll-translate span {
-    background: #111;
-    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
-            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); }
+  /* line 104, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate.correct span:before {
+    color: green !important; }
+  /* line 108, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate.incorrect span:before {
+    color: red !important; }
+  /* line 113, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .roll-translate.easy span {
+    -webkit-animation: roll-easy 1s ease;
+    -webkit-animation-fill-mode: both; }
+  /* line 121, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate.hard span:before {
+    -webkit-transform: translate3d(0px, -105%, -60px) rotateX(90deg);
+            transform: translate3d(0px, -105%, -60px) rotateX(90deg); }
+  /* line 125, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate.hard span:after {
+    -webkit-transform: translate3d(0px, -105%, -30px) rotateX(90deg);
+            transform: translate3d(0px, -105%, -30px) rotateX(90deg);
+    background-image: url(../img/default.svg);
+    background-repeat: no-repeat;
+    background-position: center; }
+  /* line 132, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .roll-translate.hard span {
+    -webkit-animation: roll-hard 2.5s ease;
+    -webkit-animation-fill-mode: both; }
