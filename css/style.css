@@ -1,0 +1,58 @@
+/* line 1, /Users/Chris/Development/TJFL/css/style.scss */
+.fade-in {
+  -webkit-transition: all 750ms ease;
+          transition: all 750ms ease;
+  opacity: 0; }
+  /* line 5, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .fade-in {
+    opacity: 1; }
+
+/* line 10, /Users/Chris/Development/TJFL/css/style.scss */
+.roll-translate {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom !important;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%; }
+  /* line 19, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
+    -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
+    /* line 28, /Users/Chris/Development/TJFL/css/style.scss */
+    .roll-translate span:before {
+      content: attr(data-translation);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      text-align: center;
+      padding: 0 2px;
+      color: #fff;
+      background: #0f558a;
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      -webkit-transform: translate3d(0px, -105%, 0px) rotateX(90deg);
+              transform: translate3d(0px, -105%, 0px) rotateX(90deg); }
+    /* line 46, /Users/Chris/Development/TJFL/css/style.scss */
+    .roll-translate span:after {
+      content: attr(data-translation);
+      display: block;
+      padding: 0 2px;
+      height: 1px;
+      overflow: hidden;
+      color: transparent; }
+  /* line 57, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .roll-translate span {
+    background: #111;
+    -webkit-transform: translate3d(0px, 0px, -30px) rotateX(-90deg);
+            transform: translate3d(0px, 0px, -30px) rotateX(-90deg); }
