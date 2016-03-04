@@ -16,6 +16,25 @@
     }
 }
 
+@keyframes fade-through {
+    0%, 100% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
+
+.fade-through {
+    opacity: 0;
+    
+    .present & {
+        -webkit-animation: fade-through 1s ease;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
 @keyframes roll-easy {
     0% {
         opacity: 0;
@@ -133,5 +152,35 @@
             -webkit-animation: roll-hard 2.5s ease;
             -webkit-animation-fill-mode: both;
         }
+        
+        &.impossible span:before {
+            content:''
+        }
+    }
+}
+
+.posab {
+    position: absolute;
+}
+
+@keyframes crawl {
+    0% {
+        transform: none;
+    }
+    
+    100% {
+        transform: translateY(-40000px);
+    }
+}
+
+.the-crawl {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    .present & {
+        -webkit-animation: crawl 10s linear;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-delay: 1s;
     }
 }

@@ -18,6 +18,26 @@
     -webkit-animation: fade-in 750ms ease;
     -webkit-animation-fill-mode: both; }
 
+@-webkit-keyframes fade-through {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes fade-through {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+/* line 29, /Users/Chris/Development/TJFL/css/style.scss */
+.fade-through {
+  opacity: 0; }
+  /* line 32, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .fade-through {
+    -webkit-animation: fade-through 1s ease;
+    -webkit-animation-fill-mode: both; }
+
 @-webkit-keyframes roll-easy {
   0% {
     opacity: 0; }
@@ -78,7 +98,7 @@
     -webkit-transform: translate3d(0px, 60px, -30px) rotateX(-90deg);
             transform: translate3d(0px, 60px, -30px) rotateX(-90deg); } }
 
-/* line 56, /Users/Chris/Development/TJFL/css/style.scss */
+/* line 75, /Users/Chris/Development/TJFL/css/style.scss */
 .roll-translate {
   display: inline-block;
   overflow: hidden;
@@ -87,7 +107,7 @@
           perspective: 500px;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%; }
-  /* line 65, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 84, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate span {
     display: block;
     position: relative;
@@ -96,7 +116,7 @@
             transform-origin: 50% 100%;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d; }
-    /* line 73, /Users/Chris/Development/TJFL/css/style.scss */
+    /* line 92, /Users/Chris/Development/TJFL/css/style.scss */
     .roll-translate span:before {
       content: attr(data-translation);
       display: block;
@@ -112,7 +132,7 @@
               transform-origin: 50% 100%;
       -webkit-transform: translate3d(0px, -105%, 0px) rotateX(90deg);
               transform: translate3d(0px, -105%, 0px) rotateX(90deg); }
-    /* line 91, /Users/Chris/Development/TJFL/css/style.scss */
+    /* line 110, /Users/Chris/Development/TJFL/css/style.scss */
     .roll-translate span:after {
       content: attr(data-translation);
       display: block;
@@ -120,28 +140,63 @@
       margin-top: -36px;
       overflow: hidden;
       color: transparent; }
-  /* line 104, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 123, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate.correct span:before {
     color: green !important; }
-  /* line 108, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 127, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate.incorrect span:before {
     color: red !important; }
-  /* line 113, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 132, /Users/Chris/Development/TJFL/css/style.scss */
   .present .roll-translate.easy span {
     -webkit-animation: roll-easy 1s ease;
     -webkit-animation-fill-mode: both; }
-  /* line 121, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 140, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate.hard span:before {
     -webkit-transform: translate3d(0px, -105%, -60px) rotateX(90deg);
             transform: translate3d(0px, -105%, -60px) rotateX(90deg); }
-  /* line 125, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 144, /Users/Chris/Development/TJFL/css/style.scss */
   .roll-translate.hard span:after {
     -webkit-transform: translate3d(0px, -105%, -30px) rotateX(90deg);
             transform: translate3d(0px, -105%, -30px) rotateX(90deg);
     background-image: url(../img/default.svg);
     background-repeat: no-repeat;
     background-position: center; }
-  /* line 132, /Users/Chris/Development/TJFL/css/style.scss */
+  /* line 151, /Users/Chris/Development/TJFL/css/style.scss */
   .present .roll-translate.hard span {
     -webkit-animation: roll-hard 2.5s ease;
     -webkit-animation-fill-mode: both; }
+  /* line 156, /Users/Chris/Development/TJFL/css/style.scss */
+  .roll-translate.hard.impossible span:before {
+    content: ''; }
+
+/* line 162, /Users/Chris/Development/TJFL/css/style.scss */
+.posab {
+  position: absolute; }
+
+@-webkit-keyframes crawl {
+  0% {
+    -webkit-transform: none;
+            transform: none; }
+  100% {
+    -webkit-transform: translateY(-40000px);
+            transform: translateY(-40000px); } }
+
+@keyframes crawl {
+  0% {
+    -webkit-transform: none;
+            transform: none; }
+  100% {
+    -webkit-transform: translateY(-40000px);
+            transform: translateY(-40000px); } }
+
+/* line 176, /Users/Chris/Development/TJFL/css/style.scss */
+.the-crawl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; }
+  /* line 181, /Users/Chris/Development/TJFL/css/style.scss */
+  .present .the-crawl {
+    -webkit-animation: crawl 10s linear;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-delay: 1s; }

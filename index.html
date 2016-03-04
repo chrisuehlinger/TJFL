@@ -1,126 +1,1183 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Teaching JavaScript as a Foreign Language</title>
+    <title>Teaching JavaScript as a Foreign Language</title>
 
-		<meta name="author" content="Chris Uehlinger">
+    <meta name="author" content="Chris Uehlinger">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-        
-        
-		<link rel="stylesheet" href="css/style.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 
-		<!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Teaching JavaScript as a Foreign Language</h1>
-                    <aside class="notes">
-                        These are my notes.
-                    </aside>
-                </section>
-                
-				<section>
-                    <p>
-                        Original Sentence:
-                        <br>
-                        <span class="fade-in" style="animation-delay: 1000ms">Today </span>
-                        <span class="fade-in" style="animation-delay: 1250ms">we </span>
-                        <span class="fade-in" style="animation-delay: 1500ms">will </span>
-                        <span class="fade-in" style="animation-delay: 1750ms">talk </span>
-                        <span class="fade-in" style="animation-delay: 2000ms">about </span>
-                        <span class="fade-in" style="animation-delay: 2500ms">if</span>
-                        <span class="fade-in" style="animation-delay: 3000ms">statements. </span>
-                        <br>
-                        <span class="fade-in" style="animation-delay: 5750ms">They </span>
-                        <span class="fade-in" style="animation-delay: 6000ms">are </span>
-                        <span class="fade-in" style="animation-delay: 6250ms">very </span>
-                        <span class="fade-in" style="animation-delay: 6500ms">important </span>
-                        <span class="fade-in" style="animation-delay: 7000ms">programming </span>
-                        <span class="fade-in" style="animation-delay: 7500ms">tools.</span>
-                    </p>
-                    <p>Thai Understanding: <br>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 1000ms" data-translation="วันนี้">Today</span>
-                        </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 1250ms" data-translation="เรา">we</span>
-                            </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 1500ms" data-translation="จะ">will</span>
-                            </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 1750ms" data-translation="คุย">talk</span>
-                            </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 2000ms" data-translation="เกี่ยวกับ">about</span>
-                            </span>
-                        <span class="roll-translate incorrect hard">
-                            <span style="animation-delay: 2500ms" data-translation="ถ้า">if</span>
-                            </span>
-                        <span class="roll-translate incorrect hard">
-                            <span style="animation-delay: 3000ms" data-translation="คำแถลง">statements.</span>
-                            </span>
-                        <br>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 5750ms" data-translation="พวกเขา">They</span>
-                            </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 6000ms" data-translation="คือ">are</span>
-                            </span>
-                        <span class="roll-translate correct easy">
-                            <span style="animation-delay: 6250ms" data-translation="มาก">very</span>
-                            </span>
-                        <span class="roll-translate correct hard">
-                            <span style="animation-delay: 6500ms" data-translation="สำคัญ">important</span>
-                            </span>
-                        <span class="roll-translate correct hard">
-                            <span style="animation-delay: 7000ms" data-translation="การเขียนโปรแกรม">programming</span>
-                            </span>
-                        <span class="roll-translate correct hard">
-                            <span style="animation-delay: 7500ms" data-translation="เครื่องมือ">tools.</span>
-                            </span>
-                    </p>
-                    <aside class="notes">
-                        These are my notes.
-                    </aside>
-                </section>
-			</div>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Teaching JavaScript as a Foreign Language</h1>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - My time teaching abroad -> Skills for back home 
+                        - Not about comparing programming languages to foreign languages
+                    </script>
+                </aside>
+            </section>
 
-		</div>
+            <section>
+                <img src="img/graduation.jpg" alt="" />
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - May 19th: Graduated Loyola University Maryland
+                    </script>
+                </aside>
+            </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script src="js/main.js"></script>
+            <section>
+                <video data-autoplay class="stretch">
+                    <source data-src="img/snatch.mp4" type="video/mp4" />
+                </video>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - May 21st: Plane to Thailand
+                    </script>
+                </aside>
+            </section>
 
-	</body>
+            <section>
+                <img src="img/Saint-Gabriels.jpg" alt="" />
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Taught at St. Gabe's (Intensive English)
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <div class="stretch">
+                    <img src="img/Teaching-C-3.jpg" alt="" class="posab" style="bottom: -10px; left: -100px" />
+                    <img src="img/Teaching-C-2.jpg" alt="" class="posab" style="bottom: 100px; right: -100px" />
+                    <img src="img/Teaching-C-1.jpg" alt="" class="posab" style="top: -20px; left: 0" />
+                </div>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - 2nd year: 11th grade C programming
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>3 Main Topics</h2>
+                <ul>
+                    <li>Word Choice</li>
+                    <li>Reducing Friction</li>
+                    <li>Breaking Down Concepts</li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - 3 main topics 
+                        - Word Choice 
+                        - Friction 
+                        - Breaking down Concepts 
+                        
+                        For each topic: 
+                        - My experience in Thailand 
+                        - My experience in a tech setting 
+                        - Good tools and takeaways
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Word Choice</h2>
+                <img src="img/Blank-Face.jpg" alt="" />
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        WORD CHOICE 
+                        - Students don't ask 
+                        - Be Pro-active with them
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - My students were good at English, but it was exhausting. 
+                        - I knew how it felt, I had to do a lot of translating too 
+                        - Here's an example of a sentence from a lecture
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br>
+                    <span class="fade-in" style="animation-delay: 1000ms">If </span>
+                    <span class="fade-in" style="animation-delay: 1250ms">you </span>
+                    <span class="fade-in" style="animation-delay: 1500ms">finish </span>
+                    <span class="fade-in" style="animation-delay: 1750ms">your </span>
+                    <span class="fade-in" style="animation-delay: 2000ms">work </span>
+                    <span class="fade-in" style="animation-delay: 2250ms">quickly, </span>
+                    <span class="fade-in" style="animation-delay: 2750ms">you </span>
+                    <span class="fade-in" style="animation-delay: 3000ms">can </span>
+                    <span class="fade-in" style="animation-delay: 3250ms">play </span>
+                    <span class="fade-in" style="animation-delay: 3500ms">games.</span>
+                </p>
+                <p>Thai Understanding:
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1000ms" data-translation="ถ้า">If </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1250ms" data-translation="เธอ">you </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1500ms" data-translation="สุด">finish </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1750ms" data-translation="ของเธอ">your </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2000ms" data-translation="งาน">work </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2250ms" data-translation="เร็วเร็ว">quickly, </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2750ms" data-translation="เธอ">you </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3000ms" data-translation="ได้">can </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3250ms" data-translation="เล่น">play </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3500ms" data-translation="เกม">games.</span>
+                    </span>
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Here is a good sentence I could trust my students to understand
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br>
+                    <span class="fade-in" style="animation-delay: 1000ms">It </span>
+                    <span class="fade-in" style="animation-delay: 1250ms">is </span>
+                    <span class="fade-in" style="animation-delay: 1500ms">integral </span>
+                    <span class="fade-in" style="animation-delay: 1750ms">that </span>
+                    <span class="fade-in" style="animation-delay: 2000ms">you </span>
+                    <span class="fade-in" style="animation-delay: 2250ms">close </span>
+                    <span class="fade-in" style="animation-delay: 2500ms">your </span>
+                    <span class="fade-in" style="animation-delay: 2750ms">curly </span>
+                    <span class="fade-in" style="animation-delay: 3000ms">braces, </span>
+                    <br>
+                    <span class="fade-in" style="animation-delay: 3500ms">or </span>
+                    <span class="fade-in" style="animation-delay: 3750ms">function </span>
+                    <span class="fade-in" style="animation-delay: 4000ms">execution </span>
+                    <span class="fade-in" style="animation-delay: 4250ms">could </span>
+                    <span class="fade-in" style="animation-delay: 4500ms">continue </span>
+                    <span class="fade-in" style="animation-delay: 5000ms">outside </span>
+                    <span class="fade-in" style="animation-delay: 5250ms">your </span>
+                    <span class="fade-in" style="animation-delay: 5500ms">function </span>
+                    <span class="fade-in" style="animation-delay: 6000ms">block. </span>
+                </p>
+                <p>Thai Understanding:
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1000ms" data-translation="มัน">It</span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1250ms" data-translation="คือ">is</span>
+                    </span>
+                    <span class="roll-translate correct hard impossible">
+                            <span style="animation-delay: 1500ms" data-translation="d">integral</span>
+                    </span>
+                    <span class="fade-through" style="animation-delay: 1750ms">that</span>
+                    <span class="fade-through" style="animation-delay: 2000ms">you</span>
+                    <span class="fade-through" style="animation-delay: 2250ms">close</span>
+                    <span class="fade-through" style="animation-delay: 2500ms">your</span>
+                    <span class="fade-through" style="animation-delay: 2750ms">curly</span>
+                    <span class="fade-through" style="animation-delay: 3000ms">braces,</span>
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3500ms" data-translation="หรือ">or</span>
+                    </span>
+                    <span class="roll-translate hard impossible">
+                            <span style="animation-delay: 3750ms" data-translation="d">function</span>
+                    </span>
+                    <span class="roll-translate hard impossible">
+                            <span style="animation-delay: 4000ms" data-translation="d">execution</span>
+                    </span>
+                    <span class="fade-through" style="animation-delay: 4250ms">could</span>
+                    <span class="fade-through" style="animation-delay: 4500ms">continue</span>
+                    <span class="fade-through" style="animation-delay: 5000ms">outside</span>
+                    <span class="fade-through" style="animation-delay: 5250ms">your</span>
+                    <span class="fade-through" style="animation-delay: 5500ms">function</span>
+                    <span class="fade-through" style="animation-delay: 6000ms">block.</span>
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - This is a trainwreck. 
+                        - A sentence like this could make students give up
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br> The "return type" specifies the type of value the function will return.
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Here's a sentence I re-phrased 
+                        - "kind of thing" instead of "type" 
+                        - "give back" instead of "return"
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br> The "return type" specifies the type of value the function will return.
+                </p>
+                <p>
+                    Re-phrased Sentence:
+                    <br>
+                    <span class="fade-in" style="animation-delay: 1000ms">What </span>
+                    <span class="fade-in" style="animation-delay: 1250ms">does </span>
+                    <span class="fade-in" style="animation-delay: 1500ms">"return type" </span>
+                    <span class="fade-in" style="animation-delay: 2000ms">mean? </span>
+                    <span class="fade-in" style="animation-delay: 2750ms">"Return type" </span>
+                    <span class="fade-in" style="animation-delay: 3250ms">tells </span>
+                    <span class="fade-in" style="animation-delay: 3500ms">the </span>
+                    <span class="fade-in" style="animation-delay: 3750ms">kind of</span>
+                    <span class="fade-in" style="animation-delay: 4000ms">thing </span>
+                    <span class="fade-in" style="animation-delay: 4250ms">the </span>
+                    <span class="fade-in" style="animation-delay: 4500ms">function </span>
+                    <span class="fade-in" style="animation-delay: 4750ms">will </span>
+                    <span class="fade-in" style="animation-delay: 5000ms">give </span>
+                    <span class="fade-in" style="animation-delay: 5250ms">back. </span>
+                </p>
+                <p>Thai Understanding:
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1000ms" data-translation="อะ">What </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1250ms" data-translation="ไร">does </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1500ms" data-translation="return type">"return type" </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2000ms" data-translation="คือ">mean? </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2750ms" data-translation="Return type">"Return type" </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3250ms" data-translation="บอก">tells </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3500ms" data-translation="">the </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3750ms" data-translation="ชนิด">kind of</span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4000ms" data-translation="สิ่ง">thing </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4250ms" data-translation="">the </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4500ms" data-translation="function">function </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4750ms" data-translation="จะ">will </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 5000ms" data-translation="ให้">give </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 5250ms" data-translation="กลับ">back. </span>
+                    </span>
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Here's a sentence I re-phrased 
+                        - "kind of thing" instead of "type" 
+                        - "give back" instead of "return" 
+                        - Signal that "return type" will be defined
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h1>?</h1>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Technical speech isn't a different language, right?
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                Class, Prototype, Method
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Some words we've recycled.
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                Monad, Monkey Patching, Duck Typing
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Some words we clearly made up
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                Method Swizzling
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - I mean come on
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <div class="fragment">Refactor, Concatenate</div>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - But some words are clearly the result of mad science
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br>
+                    <span class="fade-in" style="animation-delay: 1000ms">If </span>
+                    <span class="fade-in" style="animation-delay: 1250ms">we </span>
+                    <span class="fade-in" style="animation-delay: 1500ms">concatenate </span>
+                    <span class="fade-in" style="animation-delay: 2000ms">our </span>
+                    <span class="fade-in" style="animation-delay: 2250ms">JavaScript </span>
+                    <span class="fade-in" style="animation-delay: 2500ms">files, </span>
+                    <span class="fade-in" style="animation-delay: 3000ms">our </span>
+                    <span class="fade-in" style="animation-delay: 3250ms">page </span>
+                    <span class="fade-in" style="animation-delay: 3500ms">will </span>
+                    <span class="fade-in" style="animation-delay: 3750ms">load </span>
+                    <span class="fade-in" style="animation-delay: 4000ms">faster.</span>
+                </p>
+                <p>How it sounds:
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1000ms" data-translation="If">If </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1250ms" data-translation="we">we </span>
+                    </span>
+                    <span class="roll-translate incorrect easy">
+                            <span style="animation-delay: 1500ms" data-translation="(Do something to?)">concatenate </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2000ms" data-translation="our">our </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2250ms" data-translation="JavaScript">JavaScript </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2500ms" data-translation="files">files, </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3000ms" data-translation="our">our </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3250ms" data-translation="page">page </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3500ms" data-translation="will">will </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3750ms" data-translation="load">load </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4000ms" data-translation="faster">faster.</span>
+                    </span>
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Sentence diagram with concatenate
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <p>
+                    Original Sentence:
+                    <br>
+                    <span class="fade-in" style="animation-delay: 1000ms">If </span>
+                    <span class="fade-in" style="animation-delay: 1250ms">we </span>
+                    <span class="fade-in" style="animation-delay: 1500ms">combine </span>
+                    <span class="fade-in" style="animation-delay: 2000ms">our </span>
+                    <span class="fade-in" style="animation-delay: 2250ms">JavaScript </span>
+                    <span class="fade-in" style="animation-delay: 2500ms">files, </span>
+                    <span class="fade-in" style="animation-delay: 3000ms">our </span>
+                    <span class="fade-in" style="animation-delay: 3250ms">page </span>
+                    <span class="fade-in" style="animation-delay: 3500ms">will </span>
+                    <span class="fade-in" style="animation-delay: 3750ms">load </span>
+                    <span class="fade-in" style="animation-delay: 4000ms">faster.</span>
+                </p>
+                <p>How it sounds:
+                    <br>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1000ms" data-translation="If">If </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1250ms" data-translation="we">we </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 1500ms" data-translation="combine">combine </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2000ms" data-translation="our">our </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2250ms" data-translation="JavaScript">JavaScript </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 2500ms" data-translation="files">files, </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3000ms" data-translation="our">our </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3250ms" data-translation="page">page </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3500ms" data-translation="will">will </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 3750ms" data-translation="load">load </span>
+                    </span>
+                    <span class="roll-translate correct easy">
+                            <span style="animation-delay: 4000ms" data-translation="faster">faster.</span>
+                    </span>
+                </p>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Sentence diagram with combine instead of concatenate
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Takeaways</h2>
+                <ul>
+                    <li>Choose your words carefully based on your audience.</li>
+                    <li>Be aware of the burden your word choice places on listener.</li>
+                    <li>Sometimes simple words are better than specific ones.</li>
+                </ul>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - How to choose words based on the audience 
+                        - Some common substitutions 
+                        - "HTTPS" instead of "SSL" 
+                        - "List" instead of "Array" 
+                        - "Folder" instead of "Directory"
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Reducing Friction</h2>
+                <div class="stretch">
+                    <img src="img/Start-Menu.png" alt="" class="fragment posab" style="bottom: 0px; left: 0px" />
+                    <img src="img/Dev-C++.jpg" alt="" class="fragment posab " style="top: 0px; left: 0px" />
+                    <img src="img/Hello-World-Slide.png" alt="" class="fragment posab " style="top: 50px; left: 50px" />
+                    <img src="img/Hello-World.jpg" alt="" class="fragment posab " style="top: 30px; right: 0px; width: 75%" />
+                </div>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        REDUCING FRICTION 
+                        Getting Hello World Set up: 
+                        - Dev-C++ 
+                        - Copy this code 
+                        - Run it in the terminal 
+                        - When do we get to make "real programs" 
+                        
+                        What went wong here?
+                        The "But don't worry about that" test.
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <a href="//worrydream.com/LearnableProgramming">
+                    <img src="img/Learnable-Programming.png" alt="" />
+                </a>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        Switching to JS: 
+                        - Learnable Programming
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <iframe class="stretch" data-src="http://www.fullstack.io/choc/"></iframe>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        Switching to JS: 
+                        - Choc.js
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <iframe class="stretch" data-src="http://sg-study-c.appspot.com/choc/3"></iframe>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        Switching to JS: 
+                        - My new lessons
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        BREAKING DOWN CONCEPTS 
+                        - The Buzz 
+                        - Ferris Wheel!
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <canvas data-prevent-swipe id="globeUniverse" class="fullscreen"></canvas>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        BREAKING DOWN CONCEPTS 
+                        - The Buzz 
+                        - Ferris Wheel!
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <div class="stretch" style="text-align: left">
+                    <ul>
+                        <li class="fade-in" style="animation-delay: 2000ms">Terminal</li>
+                        <li class="fade-in" style="animation-delay: 2500ms">Homebrew</li>
+                        <li class="fade-in" style="animation-delay: 3000ms">git</li>
+                        <li class="fade-in" style="animation-delay: 3500ms">GitHub</li>
+                        <li class="fade-in" style="animation-delay: 4000ms">GitHub Pages</li>
+                        <li class="fade-in" style="animation-delay: 4500ms">Jekyll</li>
+                        <li class="fade-in" style="animation-delay: 5000ms">Markdown</li>
+                        <li class="fade-in" style="animation-delay: 5500ms">Octopress</li>
+                        <li class="fade-in" style="animation-delay: 6000ms">YAML</li>
+                        <li class="fade-in" style="animation-delay: 6500ms">Ruby</li>
+                        <li class="fade-in" style="animation-delay: 7000ms">RubyGems/bundler</li>
+                        <li class="fade-in" style="animation-delay: 7500ms">Ruby Version Manager</li>
+                    </ul>
+                    <div class="the-crawl">
+                        <div class="entry-content">
+                            <p>This is part 1 in a series on set­ting up your per­sonal space on the web:</p>
+
+                            <ul>
+                                <li>Part 1: Setting up a Github Project Page</li>
+                                <li><a href="/blog/2014/12/22/how-i-set-up-my-personal-website-part-2/">Part 2: Setting up an Octopress site for you blog and portfolio</a></li>
+                            </ul>
+
+
+                            <p>Set­ting up a per­sonal space on the web is eas­ily one of the best things I’ve done this year. If you’re new to Web Design/De­vel­op­ment and you want to know what the single best thing you can do is, I’m going to lay it all out for you right here.</p>
+
+                            <p>So be­fore we get star­ted, a few dis­claim­ers:</p>
+
+                            <ol>
+                                <li>These are my suggestions. There’s a lot of flexibility here. You can use different tools, different hosting, whatever.</li>
+                                <li>Some of this stuff may seem complicated or excessive. I’ll try and cover the “why” of each step in an aside, in case you’re curious. However, some of these tools have entire books dedicated to them, so I’ll try and redirect you to a better source if you’re still puzzled.</li>
+                                <li>I’m assuming some familiarity with these tools (especially Git). If something seems crazy, I’ll link to more documentation, but I’m going to be moving at a bit of a brisk pace.</li>
+                                <li>None of these steps matter, as long as in the end you achieve the following:</li>
+                            </ol>
+
+
+                            <p><strong>You need to have a place on the web that you can call your own.</strong> Ideally, it should be:</p>
+
+                            <ul>
+                                <li>A place where, if an idea strikes you, you can <strong>immediately</strong> build it and share it.</li>
+                                <li>A place where, if someone wants to see real examples of your work, all your weekend projects and little experiments are on display.</li>
+                                <li>Hosted in such a way that it won’t keel over if you get a couple thousand hits from Hacker News.</li>
+                            </ul>
+
+
+                            <p>I posit that the best way to do this is to get an oc­to­press blog on git­hub pages on a per­sonal do­main, and then de­velop all your pro­jects with a <code>gh-pages</code> branch so you can share them eas­ily. After about a year of hav­ing this easy pub­lish­ing at your dis­posal, you’ll sud­denly real­ize that you now have an eas­ily share­able on­line port­fo­lio. Awe­some.</p>
+
+                            <p>If you want to see the code for my per­sonal web­site (which should in­clude the file with this blog post) I’ve up­loaded it <a href="https://github.com/chrisuehlinger/chrisuehlinger.github.io">here</a>. This is the kind of thing you’re going to end up with at the end of all this.</p>
+
+                            <h2>Getting your environment set up</h2>
+
+                            <p>For this first part, all you need is a ter­minal (I use the Mac OS X Ter­minal that comes with any Mac), and an in­stall of git (which comes with every Mac).</p>
+
+                            <p>You should also have your text ed­itor of choice. Any text ed­itor will do, al­though I highly rec­comend <a href="http://www.sublimetext.com/">Sub­lime Text</a> and/or <a href="http://brackets.io/">Brack­ets</a>.</p>
+
+                            <h2>Let’s talk about Github pages</h2>
+
+                            <p>So <a href="https://github.com/">Git­hub</a> is a great web­site that lets you up­load your code to share with oth­ers. There are tons of great code­bases on there, and you could spend days just por­ing over the code in some of the really great pro­jects. However, what we’re really in­ter­ested in here is <a href="https://pages.github.com/">Git­hub Pages</a>.</p>
+
+                            <p>Ba­sic­ally, Git­hub will host your site for free. Yes. Free. The catch is that your site has to be static. It has to be a folder full of html, css, javas­cript and image files that the server can throw at someone if they ask for them by name. No data­base, no backend logic, just a folder full of files.</p>
+
+                            <p>There are huge ad­vant­ages to hav­ing a site like this. Even if you don’t use Git­hub Pages, you can eas­ily find cheap host­ing for a static site. There’s also the fact that static sites are really cheap and easy to serve, so your site can stand up to mon­strous amounts of traffic. As of today, I’ve never heard of any­one’s Git­hub Pages site going down due to too many re­quests, and Git­hub never comes after your credit card.</p>
+
+                            <p>And it gets bet­ter. With Git­hub Pages you can eas­ily make a page for any of your pro­jects. If one of your Git­hub re­pos­it­or­ies has a branch called <code>gh-pages</code>, and that branch has an <code>index.html</code> file, you can eas­ily get to it at <code>{yourname}.github.io/{repository-name}</code>. These pro­ject pages are the best part of this whole thing, so let’s get that squared away right now.</p>
+
+                            <h2>Let’s publish a project</h2>
+
+                            <p>To start out, go to <a href="https://github.com">Git­hub</a> and make a new re­s­pos­it­ory. Call it <code>HelloWeb</code>, de­cide whether you want a README file and a <code>.gitignore</code> file (you can start with one or make one later, it doesn’t really mat­ter) …al­right good. Now go into your Ter­minal, find a nice cozy part of your hard drive (I re­com­mend mak­ing a <code>~/Development</code> dir­ect­ory to keep all your dev stuff in) and type the fol­low­ing com­mand:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git clone https://github.com/<span class="o">{</span>yourname<span class="o">}</span>/HelloWeb
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>This will down­load the git re­pos­it­ory and store it in a dir­ect­ory named <code>HelloWeb</code>. USe the com­mand <code>cd HelloWeb</code> to go in­side the re­pos­it­ory. Now, you’ll start off on the <code>master</code> branch, so you’ll need to make a <code>gh-pages</code> branch where you’ll be doing your cod­ing.</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git branch gh-pages
+</span><span class="line">git checkout gh-pages
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>So far so good, now fire up your text ed­itor and make a file in <code>~/Development/HelloWeb</code> called <code>index.html</code>. You can keep it simple:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td>
+                                                <td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;h1&gt;</span>Hello!<span class="nt">&lt;/h1&gt;</span>
+</span><span class="line"><span class="nt">&lt;script&gt;</span>
+</span><span class="line">    <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello Hello!'</span><span class="p">);</span>
+</span><span class="line"><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Save that, head back to the Ter­minal, and add this file to your re­pos­it­ory:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git add index.html
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Now make a com­mit to “save” what you’ve done:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git commit -am <span class="s2">"Added index.html"</span>
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Now push the <code>gh-pages</code> branch up to Git­Hub (they take care of set­ting up a lot of the re­mote stuff)</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git push origin gh-pages
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Now go to <code>{yourname}.github.io/HelloWeb</code>. There’s your page! (It may take a minute or so the first time)</p>
+
+                            <p>The hard part is done. You have an HTML file on your com­puter. You can put any HTML, CSS or Javas­cript in there, and it will show up, as you wrote it, to any­one, on any com­puter, any­where in the world (if they visit your web­site).</p>
+
+                            <p>Feel that? That’s what power feels like.</p>
+
+                            <p>Now let’s try something else. Let’s take someone else’s pro­ject, make some changes to it, and up­load it to our site.</p>
+
+                            <h2>Make your own 2048</h2>
+
+                            <p>Let’s say you really like the game <a href="http://gabrielecirulli.github.io/2048/">2048</a>, and you want to make a spinoff that works a little dif­fer­ently. A lot of my pro­jects start off like this— I’ll see something cool, ima­gine a dif­fer­ent way it could work, make some changes, and then share it (giv­ing credit to the per­son who had the idea of course).</p>
+
+                            <p>You may have no­ticed, 2048 is on a <code>github.io</code> do­main. The guy who made it pushed it to the <code>gh-pages</code> branch of a repo named “2048”. This will be pretty easy. First, go to <a href="https://github.com/gabrielecirulli/2048">https://​github.​com/​gabrielecirulli/​2048</a> and click the but­ton in the upper right part of the screen labeled “Fork”.</p>
+
+                            <p>Once you’ve forked the repo (that is, you’ve made a per­son­ally copy of it that is now under your name) down­load it to your <code>~/Development/</code> dir­ect­ory:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git clone https://github.com/<span class="o">{</span>yourname<span class="o">}</span>/2048
+</span><span class="line"><span class="nb">cd </span>2048
+</span><span class="line">git checkout gh-pages
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Ready to go? Al­right, make a change to one of the files in there. Do any­thing. Make the back­ground pink. <a href="http://css-tricks.com/almanac/properties/f/filter/">Use CSS fil­ters to make the num­bers blurry.</a> Put your name on the page as an <code>&lt;h1&gt;</code>, any­thing. When you’re done, do this:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">git add <span class="o">{</span>any new files you made <span class="k">if </span>you made any<span class="o">}</span>
+</span><span class="line">git commit -am <span class="s2">"{write a description of your change}"</span>
+</span><span class="line">git push origin gh-pages
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Boom. It’s up there. Now you can show any­one your “Pink, blurry, per­son­ally branded 2048”. If you go to <a href="http://chrisuehlinger.com/2048/">http://​chrisuehlinger.​com/​2048/​</a> you’ll see my ver­sion. I tried to write an AI that would beat the game. I did that be­cause I was bored one af­ter­noon, and now it’s part of my port­fo­lio, and I can bring it up on my iPhone in the middle of an in­ter­view.</p>
+
+                            <p>So now you’ve got an easy way to pub­lish any­thing you do. But what would really help would be a cent­ral­ized site with a blog, and a port­fo­lio page, and other good­ies. I’ll cover that in my next post.</p>
+
+                            <h2>A few last goodies</h2>
+
+                            <p>You’re going to want a way to run your site on your com­puter, so you don’t need to push to Git­hub every time you want to check if somethings work­ing. I highly rec­comend the Node.​js mod­ule <code>http-server</code>. If you already have the Node pack­age man­ager <code>npm</code>, type this to in­stall the pack­age:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">npm install -g http-server
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Then go to the dir­ect­ory where the HTML files are and type:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">http-server -p 1234
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Your web­site should now ap­pear at <code>http://localhost:1234</code>. Any­time you change something, just re­fresh the page and you’ll see the change.</p>
+
+                            <p>I also HIGHLY rec­comend the node app called <code>ungit</code>. It’s a GUI that makes it much easier to use git. To in­stall it, type:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">npm install -g ungit
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Go to the dir­ect­ory where your re­pos­it­ory is and type:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">ungit
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Now vis­it­ing <code>http://localhost:9000</code> will show you the app.</p>
+                        </div>
+                        <div class="entry-content">
+                            <p>This is a con­tinu­ation of my post on get­ting your per­sonal space on the web set up.</p>
+
+                            <ul>
+                                <li><a href="/blog/2014/12/22/how-i-set-up-my-personal-website/">Part 1: Setting up a Github Project Page</a></li>
+                                <li>Part 2: Setting up an Octopress site for you blog and portfolio</li>
+                            </ul>
+
+
+                            <p>So at this point, you should be able to visit <code>{yourname}.github.io/HelloWeb</code> or <code>{yourname}.github.io/2048</code> and see the pages you made. But what if you visit plain old <code>{yourname}.github.io</code>? You get a 404 error. We need to get you set up with a <code>github.io</code> re­pos­it­ory and a Je­kyll static site.</p>
+
+                            <p>This is going to get a bit more in depth, but stick around and you’ll have a really solid per­sonal port­fo­lio.</p>
+
+                            <h2>A refresher on Github Pages</h2>
+
+                            <p>So, Git­hub Pages lets you up­load static pages that get served up from your <code>github.io</code> sub­do­main. One thing I didn’t cover, is that if you make a re­pos­it­ory called <code>{yourname}.github.io</code> and push it to Git­hub, they will ma­gic­ally take whatever is in there and serve it up at your site.</p>
+
+                            <p>If you have a file in this re­pos­it­ory called <code>index.html</code> that file now be dis­played if you go to <code>{yourname}.github.io</code> (it has to be in the <code>master</code> branch, which is the de­fault one, NOT the <code>gh-pages</code> branch). If you have a file called <code>about.html</code>, it will be vis­ible at <code>{yourname}.github.io/about.html</code>. If you have folder called <code>contact</code> that con­tains a file called <code>index.html</code>, it will be vis­ible at <code>{yourname}.github.io/contact/</code>.</p>
+
+                            <p>But we can do a bit bet­ter than just plain old HTML, and that’s where Je­kyll comes in.</p>
+
+                            <h2>Let’s talk about Jekyll</h2>
+
+                            <p>Static pages sound cool, until you start to miss a lot of the cool things you get with dy­namic web­sites:</p>
+
+                            <ul>
+                                <li>What if you want the same header on every page?</li>
+                                <li>What if you want to tag and categorize your blog posts, or have their URLs be in /year/month/day format?</li>
+                                <li>What if you want the ability to swap out themes?</li>
+                                <li>What if you want to write your posts in easy to read/write Markdown, instead of verbose, annoying HTML?</li>
+                            </ul>
+
+
+                            <p>For­tu­nately, there’s Je­kyll, a static site gen­er­ator that gives you a lot of this stuff. You can read about it <a href="http://jekyllrb.com/">here</a>.</p>
+
+                            <p>I was really con­fused when I first heard of Je­kyll, so here’s a quick run­down of how it works:</p>
+
+                            <ol>
+                                <li>You download some ruby tools</li>
+                                <li>You make a directory full of templates</li>
+                                <li>You make some pages (using either html or markdown)</li>
+                                <li>Jekyll “compiles” everything together, slotting all your pages into the templates (so they all have the same header, or whatever) and arranging the posts in your <code>_posts</code> directory so that their URLs will correspond to the dates when they were posted.</li>
+                                <li>It puts this compiled site into the <code>_site</code> directory</li>
+                            </ol>
+
+
+                            <p>Even bet­ter, when you do a git push, Git­hub will handle steps 4-5 on their own and will serve up the <code>_site</code> dir­ect­ory auto­mat­ic­ally.</p>
+
+                            <p>But be­fore you go ra­cing after Je­kyll, I want to stop you (for bet­ter or worse) from mak­ing the same mis­take I did.</p>
+
+                            <h2>Octopress</h2>
+
+                            <p>So as you start learn­ing about a lot of cool web tech­no­lo­gies, your Je­kyll con­fig­ur­a­tion will get more and more com­plic­ated.</p>
+
+                            <p>Let’s say you want to use <a href="http://sass-lang.com/">Sass</a> in­stead of plain old CSS, or you want to use <a href="http://haml.info/">Haml</a> in­stead of HTML? What if you have a <a href="http://gruntjs.com/">Grunt</a> work­flow that does all kinds of crazy stuff to your javas­cript every time you save?</p>
+
+                            <p>Well, Je­kyll has tons of plu­gins to ac­co­mod­ate for a lot of this stuff, but un­for­tu­na­tel Git­hub will only run <a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">a few cer­tain plu­gins</a> with their auto­matic Je­kyll thing. They’ve got­ten bet­ter about sup­port­ing Sass and Cof­feescript, but there’s no guar­untee they’ll ever have all the things you need.</p>
+
+                            <p>But wait… what if you wrote your site in one branch, com­piled it with Je­kyll using all the plu­gins you want, switched back to the mas­ter branch and se­lect­ively copied over the <code>_site</code> dir­ect­ory to the <code>master</code> root dir­ect­ory then pushed to Git­hub?</p>
+
+                            <p>If you were as con­fused and re­vol­ted by that last sen­tence as I was, you’ll be glad that the Oc­to­press guys have figured this all out for us. The truth is, if you stick with Je­kyll and don’t use Oc­to­press, you’ll end up mak­ing it your­self (and if you’re like me, it won’t be nearly as well thought out).</p>
+
+                            <p>Al­right, we’ve covered a lot of ground without cod­ing any­thing. That bugs me. Let’s get to work.</p>
+
+                            <h2>Setting up your environment</h2>
+
+                            <p>You may have done some of this stuff be­fore, this is just to make sure you’re on track.</p>
+
+                            <p>So I’m work­ing on a Ret­ina Mac­Book Pro; these in­struc­tions will be tailored to Mac OS X users.</p>
+
+                            <p>First, get <code>homebrew</code> up and run­ning. <code>homebrew</code> is ba­sic­ally the pack­age man­ager that con­tains all the other pack­age man­agers. It al­lows you to keep all your pro­gram­ming re­lated stuff or­gan­ized and up to date. Get­ting it set up is a bit of a task, <a href="http://brew.sh/">so I’ll let the homebrew guys them­selves ex­plain it</a>.</p>
+
+                            <p>Once you have <code>homebrew</code>, use it to grab a bunch of im­port­ant things:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">brew install git
+</span><span class="line">brew install ruby
+</span><span class="line">brew install rbenv
+</span><span class="line">brew install node
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p><code>git</code> is a ver­sion con­trol sys­tem that helps you or­gan­ize your code.</p>
+
+                            <p>Ruby is a pro­gram­ming lan­guage that has a bunch of use­ful tools we’re going to use. We won’t ac­tu­ally be writ­ing any Ruby code today. Ruby comes with <code>gem</code>, a pack­age man­ager for stuff that’s made using ruby. <code>rbenv</code> is a tool that let’s you keep track of which ver­sion of Ruby you want to use in which folder (this may seem overkill, but we need <code>rbenv</code> in order to in­stall Oc­to­press).</p>
+
+                            <p>Node.​js is a frame­work for mak­ing things with javas­cript. The Node pack­age man­ager is called <code>npm</code>, and has lots of good javas­cript re­lated stuff.</p>
+
+                            <p>Now that you have <code>ruby</code> and <code>gem</code>, let’s grab a bunch of other things we’ll need:</p>
+
+                            <figure class="code">
+                                <figcaption><span></span></figcaption>
+                                <div class="highlight">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td>
+                                                <td class="code"><pre><code class="sh"><span class="line">gem install bundler
+</span><span class="line">gem install jekyll
+</span></code></pre></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </figure>
+
+
+                            <p>Bund­ler is a spe­cial ruby pack­age in­staller (I’m not sure why ruby needs a pack­age man­ager AND an in­staller… there’s a joke about ruby pack­ages and light­bulbs in here some­where) and Je­kyll is needed so you can com­pile Je­kyll sites loc­ally on your com­puter.</p>
+
+                            <h2>Setting up your github.io project</h2>
+
+                            <p>So I’d rec­comend start­ing with the Oc­to­press doc­u­ment­a­tion, this is a little com­plic­ated.</p>
+
+                            <ul>
+                                <li><a href="http://octopress.org/docs/setup/">Getting Started</a> will show you how to download octopress</li>
+                                <li><a href="http://octopress.org/docs/deploying/github/">Deploying Octopress</a> is about hooking up Octopress to your <code>github.io</code> repository. They also cover setting up a custom domain (like chrisuehlinger.com).</li>
+                                <li><a href="http://octopress.org/docs/configuring/">Configuring your blog</a> describes different ways you can configure your blog. You should get around to this at some point.</li>
+                                <li><a href="http://octopress.org/docs/blogging/">Blogging Basics</a> covers how to create new posts or new stand-alone pages. For reference, what you’re reading right now is a “post”. If you click the “About” link in my header, it will take you to a “page”.</li>
+                            </ul>
+
+
+                            <p>Once you’re all set up, check out some of the <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">Oc­to­press themes</a> avail­able. In my opin­ion, too many people stick with the de­fault theme. Right now I’m using a mod­i­fied ver­sion of the <a href="https://github.com/tcnksm/mnmlpress">mnm­l­press theme</a>, al­though that may change by the time you read this.</p>
+
+                            <h2>Prepare for being famous</h2>
+
+                            <p>Chances are good you won’t be­come fam­ous. Sorry.</p>
+
+                            <p>However, once you share something on the web, you never know when someone might ran­domly see it, post it on so­cial media site, and drive thou­sands of people to your site over the course of a day or so. If you haven’t done your pre­par­a­tion, you won’t even know that this happened. If you’ve prop­erly pre­pared, this op­por­tun­ity could net you a new job, a bajil­l­ion twit­ter fol­low­ers or even just a bunch of people say­ing “Thanks”.</p>
+
+                            <p>You want people to be able to eas­ily con­tact you if they like your stuff. Eas­ily is an un­der­state­ment. The very IN­STANT their brain chem­ic­als form into “like” con­fig­ur­a­tion, they should be able to con­tact you with 0 ef­fort. You don’t need a float­ing “so­cial media ice­berg” on the side of your page, but you should def­in­itely have:</p>
+
+                            <ul>
+                                <li>A “Contact” page that can be accessed from your header, with your email, Twitter handle and Github account</li>
+                                <li>A “You can follow me on Twitter” link at the bottom of every post. (Even if you aren’t hugely into Twitter, a lot of people will be sharing your stuff through it, so I’d advise you to get one)</li>
+                                <li>Disqus comments enabled so people can give feedback.</li>
+                            </ul>
+
+
+                            <p>Set up <a href="https://disqus.com/">Dis­qus</a> and put your Dis­qus ID in your <code>_config.yml</code> file. Oc­to­press will add Dis­qus com­ments to the bot­tom of your posts. It’s super easy, and often the most dir­ect way you can re­ceive feed­back.</p>
+
+                            <p>Since you’ll no doubt have tons of pro­jects ac­cess­ible on your site, or­gan­iz­ing them into a “port­fo­lio” page and link­ing to that page in your header is also SO WISE.</p>
+
+                            <p>Oc­to­press comes with Google Ana­lyt­ics bundled in. You should set up a <a href="http://www.google.com/analytics/">Google Ana­lyt­ics</a> ac­count, and put your Google Ana­lyt­ics ID in your <code>_config.yml</code> file. You should also make sure you in­clude the Google Ana­lyt­ics “magic javas­cript snip­pet” in EVERY HTML file in every pro­ject you post.</p>
+
+                            <p>Do all this stuff NOW. Mak­ing stuff people like is hard enough, turn­ing those likes into men­ing­ful con­nec­tions doesn’t have to be.</p>
+
+                            <h2>Happy Trails!</h2>
+
+                            <p>Hope­fully you now have a per­sonal space on the web where you can post any­thing. You still have to make cool things, there’s no get­ting around that. But now:</p>
+
+                            <ul>
+                                <li>Random things you make on a lazy afternoon can instantly become part of your portfolio</li>
+                                <li>Simply by existing, this page is “passively promoting” you on the internet. Anyone who googles your name will hopefully end up here.</li>
+                            </ul>
+
+
+                            <p>If you’re feel­ing un­in­spired, here are a bunch of the out­land­ish things you can do with just HTML, CSS and Javas­cript:</p>
+
+                            <ul>
+                                <li>The <a href="http://www.html5rocks.com/en/tutorials/webaudio/intro/">Web Audio API</a> lets you make <a href="http://webaudiodemos.appspot.com/midi-synth/index.html">synthesizers</a>, <a href="https://webaudiodemos.appspot.com/Vocoder/index.html">vocoders</a> and <a href="http://webaudiodemos.appspot.com/wubwubwub/index.html">DJ equipment</a> using JS</li>
+                                <li><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">WebRTC</a> is an amazing piece of technology that lets you make a video or audio chat client in the browser using just javascript</li>
+                                <li><a href="http://bl.ocks.org/mbostock">Mike Bostock</a> has tons of crazy visualizations he made using his <a href="http://d3js.org/">D3.js</a> library. All of these are on Github for you to play with.</li>
+                                <li><a href="http://hakim.se/">Hakim El Hattab</a> always has tons of cool stuff to check out, a lot of it using CSS 3D transforms and WebGL.</li>
+                            </ul>
+
+
+                            <p>I hope these art­icles have helped, good luck!</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        - Octopress
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Takeaways</h2>
+                <ul>
+                    <li>Think about your audience when choosing words</li>
+                    <li>Keep count of how many times you say "but don't worry about that" when describing something.</li>
+                    <li>Embrace "The Buzz", but remember to put your students goals first.</li>
+                </ul>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        TAKEAWAYS
+                    </script>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Thanks for Listening!</h2>
+                <ul>
+                    <li>GitHub: <a href="javascript: void()">@chrisuehlinger</a></li>
+                    <li>Twitter: <a href="javascript: void()">@Uehreka</a></li>
+                    <li>Website: <a href="javascript: void()">chrisuehlinger.com</a></li>
+                </ul>
+                <aside class="notes" data-markdown>
+                    <script type="text/template">
+                        Thanks for listening!
+                    </script>
+                </aside>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/SphericalUniverse.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>

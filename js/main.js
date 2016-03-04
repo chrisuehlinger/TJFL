@@ -5,6 +5,7 @@ Reveal.initialize({
     progress: false,
     history: true,
     center: true,
+    viewDistance: 3,
 
     transition: 'convex', // none/fade/slide/convex/concave/zoom
 
@@ -19,3 +20,29 @@ Reveal.initialize({
     ]
 });
 
+var globeOptions = {
+  speedOfLight: 200,
+  thrust: 5,
+  width: 960,
+  height: 700,
+  startingCount: 0,
+  endCount: 100,
+  expansionFactor: 1.01,
+  additionDelay: 5,
+  expansionWait: 5000,
+  expansionDelay: 0,
+  maxExpansion: 5,
+  cooldownFactor: 0.9,
+  collisionForce: 0.1,
+  useForceLayout: false,
+  useCollisions: true,
+  outlineParticles: false,
+  renderGraticules: true,
+  renderPlanet: false,
+  projection: 'Globe',
+  shipCentered: true,
+  paused: true
+};
+
+var globeUniverse = new SphericalUniverse('#globeUniverse', globeOptions);
+globeUniverse.init();

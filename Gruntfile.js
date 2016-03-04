@@ -114,7 +114,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			options: {
-				livereload: true
+				livereload: 99546
 			},
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
